@@ -41,6 +41,7 @@ pipeline {
         stage('6-scriptdemo'){
             steps{
                 sh 'echo "things are happening; houraaa!!!!"'
+                sh 'echo "jenkins is so cool!!!"'
             }
         }
 	}
