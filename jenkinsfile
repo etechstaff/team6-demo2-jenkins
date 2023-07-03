@@ -3,8 +3,9 @@ pipeline {
 	stages{
 		stage('1-clonecode'){
 			steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-credent', url: 'https://github.com/etechstaff/team6-demo2-jenkins.git']])	
-				}
+			sh 'echo "welcome to jenkins demo"'
+			}
+		}
 		stage('2-s2'){
 			steps{
 				sh 'lscpu'
@@ -14,7 +15,7 @@ pipeline {
 		stage('3-s3'){
 			steps{
 				sh 'df -h'
-				sh 'touch team1'
+				sh 'touch team6'
 			}
 		}
 		stage('4-s4'){
@@ -39,7 +40,7 @@ pipeline {
         }
         stage('6-scriptdemo'){
             steps{
-                sh '/var/lib/jenkins/workspace/pipeline-demo-pipeline/scriptdemo.sh'
+                sh 'echo "this is the end"'
             }
         }
 	}
